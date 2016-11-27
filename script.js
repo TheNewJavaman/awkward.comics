@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $(".logo, .link1, #btn3, #btn4, #btn5").click(function() {
+  $(".logo, .link1, #btn3, #btn4").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
