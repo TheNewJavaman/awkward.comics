@@ -23,7 +23,7 @@ $(document).ready(function() {
   });
 
   $("btn5").click(function() {
-    window.location.replace("contact.html");
+    $window.location.replace("contact.html");
   });
 
 });
