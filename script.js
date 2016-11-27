@@ -23,7 +23,7 @@ $(document).ready(function() {
   });
 
   $("btn5").click(function() {
-    $window.location.replace("contact.html");
+    $(location).attr('href', 'contact.html')
   });
 
 });
