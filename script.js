@@ -22,4 +22,8 @@ $(document).ready(function() {
     }, 1000);
   });
 
+  $("btn5").click(function() {
+    window.location.replace("contact.html");
+  });
+
 });
