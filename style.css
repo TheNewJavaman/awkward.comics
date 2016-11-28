@@ -197,15 +197,15 @@ body {
 }
 
 .left {
-  float: left; width: 24.5%;
+  float: left; width: 19.5%;
 }
 
 .right {
-  float: right; width: 24.5%;
+  float: right; width: 19.5%;
 }
 
 .center {
-  display: inline-block; width: 50%;
+  display: inline-block; width: 60%;
 }
 
 .column-top {
