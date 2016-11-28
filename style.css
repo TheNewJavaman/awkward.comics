@@ -196,6 +196,18 @@ body {
   display: inline-block; width: 33%;
 }
 
+.left {
+  float: left; width: 25%;
+}
+
+.right {
+  float: right; width: 25%;
+}
+
+.center {
+  display: inline-block; width: 50%;
+}
+
 .column-top {
   margin-bottom: 100px;
 }
