@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $(".logo, .link1").click(function() {
+  $(".logo, .link1, jumbutton").click(function() {
     $("html, body").animate({ scrollTop: 0 }, "slow");
   });
 
