@@ -23,11 +23,27 @@ $(document).ready(function() {
   });
 
   $("#back").click(function() {
-    
+    var $img = $("#comicimg");
+    var currentindex = parseInt($img.attr("src").replace(".jpg", "").replace("comics/", ""));
+    var img = new Image();
+    img.src = "comics/"+parseInt(currentindex+1)+".jpg";
+    if(img.height != 0) {
+      $("#comicimg").attr("src","comics/"+parseInt(currentindex+1)+".jpg");
+    }
+    $("#comicimg").hide();
+    $("#comicimg").show();
   });
 
   $("#next").click(function() {
-    
+    var $img = $("#comicimg");
+    var currentindex = parseInt($img.attr("src").replace(".jpg", "").replace("comics/", ""));
+    var img = new Image();
+    img.src = "comics/"+parseInt(currentindex-1)+".jpg";
+    if(img.height != 0) {
+      $("#comicimg").attr("src","comics/"+parseInt(currentindex-1)+".jpg");
+    }
+    $("#comicimg").hide();
+    $("#comicimg").show();
   });
 
 });
