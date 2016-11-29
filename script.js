@@ -22,4 +22,12 @@ $(document).ready(function() {
     }, 1000);
   });
 
+  $("#back").click(function() {
+    
+  });
+
+  $("#next").click(function() {
+    
+  });
+
 });
