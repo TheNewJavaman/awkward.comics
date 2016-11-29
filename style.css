@@ -196,24 +196,17 @@ body {
   display: inline-block; width: 33%;
 }
 
-.left {
-  float: left; width: 19.5%;
-}
-
-.right {
-  float: right; width: 19.5%;
-}
-
-.center {
-  display: inline-block; width: 60%;
-}
-
 .column-top {
   margin-bottom: 100px;
 }
 
 .column-bottom [
   margin-top: 100px;
+}
+
+.center {
+  margin-bottom: 100px;
+  display: inline-block; width: 100%;
 }
 
 hr {

@@ -40,51 +40,42 @@
 
       <div class="container">
 
-        <!-- Top section -->
-        <div class="column-top">
+        <div style="display:inline-block;">
+	
+	  <p style="font-size:30px; font-family:gotham_book"><b>Comics</b></p>
 
-          <p class="header">Comics</p>
-
-          <hr>
-
-          <p class="paragraph">Latest comics are below</p>
-
-        </div>
-
-
-
-        <!-- Center Column, the main comic display -->
-        <div class="column-center">
-	  <?php
-            echo "<img src='bg.jpg'/>";
-	  ?>
-        </div>
-
-
+	</div>
 
         <!-- Left Column -->
-        <div class="left">
+        <div class="column-left">
 
-          <button onclick="location.href='index.html#home'" class="button btn1">BACK</button>
+          <button class="button btn1" id="back">BACK</button>
 
         </div>
 
         <!-- Right Column -->
-        <div class="right">
+        <div class="column-right">
 
-          <button onclick="location.href='index.html#home'" class="button btn1">NEXT</button>
+          <button class="button btn1" id="next">NEXT</button>
        
+        </div>
+
+        <!-- Center Column, the main comic display -->
+        <div class="center" style="margin-bottom:40px;">
+	
+            <img src='bg.jpg' width='50%' height='60%'/>
+	 
         </div>
 
 	<div class="column-bottom">
 
-	  <button onclick="location.href='index.html#home'" class="button btn1">READ MORE</button>
+	  <button onclick="location.href='index.html'" class="button btn1" id="back">HOME</button>
 
 	</div>
 
       </div>
-      	
-      	<p class="paragraph credits">Original site design by Tyson Mak</p>
+      
+      <p class="paragraph credits">Original site design by Tyson Mak</p>
       
     </section>
 
