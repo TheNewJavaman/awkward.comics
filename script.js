@@ -28,10 +28,9 @@ $(document).ready(function() {
     var img = new Image();
     img.src = "comics/"+parseInt(currentindex+1)+".jpg";
     if(img.height != 0) {
+      var d = new Date();
       $("#comicimg").attr("src","comics/"+parseInt(currentindex+1)+".jpg");
     }
-    $("#comicimg").hide();
-    $("#comicimg").show();
   });
 
   $("#next").click(function() {
@@ -40,10 +39,9 @@ $(document).ready(function() {
     var img = new Image();
     img.src = "comics/"+parseInt(currentindex-1)+".jpg";
     if(img.height != 0) {
+      var d = new Date();
       $("#comicimg").attr("src","comics/"+parseInt(currentindex-1)+".jpg");
     }
-    $("#comicimg").hide();
-    $("#comicimg").show();
   });
 
 });
