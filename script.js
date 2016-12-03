@@ -29,7 +29,7 @@ $(document).ready(function() {
     var vars = query.split("&");
     var pair = vars[0].split("=");
     var latest = pair[1];
-    if(latest>=parseInt(currentindex)){
+    if(latest>=parseInt(parseInt(currentindex)+2)){
       $("#comic #comicimg").remove();
       $("#list #listp").remove();
       $("#comic").append("<img src='"+src+"' width='50%' height='50%' id='comicimg'/>");

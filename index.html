@@ -10,7 +10,11 @@
     <!-- Javascript / JQuery Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
-
+    <script>
+      if(!(window.location.search.substring(1).includes("#"))) {
+        window.location.href = "index.html#home";
+      }
+    </script>
     <title>Awkward Comics | Home</title>
 
   </head>

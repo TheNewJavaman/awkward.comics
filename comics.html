@@ -74,8 +74,14 @@
         <!-- Center Column, the main comic display -->
         <div class="center" style="margin-bottom:40px;" id="comic">
 	
-            <img src='comics/2.jpg' width='50%' height='50%' id="comicimg"/>
-	 
+	  <script>
+	    var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            var pair = vars[0].split("=");
+            var latest = pair[1];
+    	    var src = "comics/"+parseInt(parseInt(latest)-1)+".jpg";
+	    $("#comic").append("<img src='"+src+"' width='50%' height='50%' id='comicimg'/>");
+          </script>
         </div>
 
 	<div class="column-bottom">
