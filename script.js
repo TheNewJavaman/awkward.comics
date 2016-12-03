@@ -23,25 +23,32 @@ $(document).ready(function() {
   });
 
   $("#back").click(function() {
-    var $img = $("#comicimg");
-    var currentindex = parseInt($img.attr("src").replace(".jpg", "").replace("comics/", ""));
-    var img = new Image();
-    img.src = "comics/"+parseInt(currentindex+1)+".jpg";
-    if(img.height != 0) {
-      var d = new Date();
-      $("#comicimg").attr("src","comics/"+parseInt(currentindex+1)+".jpg");
-    }
+    var currentindex = $('#comicimg').attr("src").replace("comics/","").replace(".jpg","");
+    var src = "comics/"+parseInt(parseInt(currentindex)+1)+".jpg";
+    var query = window.location.search.substring(1);
+    var vars = query.split("&");
+    var pair = vars[0].split("=");
+    var latest = pair[1];
+    if(latest>=parseInt(currentindex)){
+      $("#comic #comicimg").remove();
+      $("#list #listp").remove();
+      $("#comic").append("<img src='"+src+"' width='50%' height='50%' id='comicimg'/>");
+      $("#list").append("<p class=\"paragraph\" id=\"listp\">"+parseInt(parseInt(currentindex)+2)+"/"+latest+"</p>");
+    }else{
+      console.log("User is at the end of the comics list");
+    };
   });
 
   $("#next").click(function() {
-    var $img = $("#comicimg");
-    var currentindex = parseInt($img.attr("src").replace(".jpg", "").replace("comics/", ""));
-    var img = new Image();
-    img.src = "comics/"+parseInt(currentindex-1)+".jpg";
-    if(img.height != 0) {
-      var d = new Date();
-      $("#comicimg").attr("src","comics/"+parseInt(currentindex-1)+".jpg");
-    }
+    var currentindex = $('#comicimg').attr("src").replace("comics/","").replace(".jpg","");
+    var src = "comics/"+parseInt(currentindex-1)+".jpg";
+    if(!(src.includes("-1"))){
+      $("#comic #comicimg").remove();
+      $("#list #listp").remove();
+      $("#comic").append("<img src='"+src+"' width='50%' height='50%' id='comicimg'/>");
+      $("#list").append("<p class=\"paragraph\" id=\"listp\">"+parseInt(currentindex)+"/"+latest+"</p>");
+    }else{
+      console.log("User is at the end of the comics list");
+    };
   });
-
 });

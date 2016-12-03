@@ -10,7 +10,11 @@
     <!-- Javascript / JQuery Files -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="script.js"></script>
-
+    <script>
+      if(!(window.location.search.substring(1).includes("="))) {
+        window.location.href = "comics.php?latest=2";
+      }
+    </script>
     <!--
     - Page title -
     Replace "TITLE" with page title.
@@ -40,9 +44,16 @@
 
       <div class="container">
 
-        <div style="display:inline-block;">
+        <div style="display:inline-block;" id="list">
 	
 	  <p style="font-size:30px; font-family:gotham_book"><b>Comics</b></p>
+          <script>
+	    var query = window.location.search.substring(1);
+    	    var vars = query.split("&");
+    	    var pair = vars[0].split("=");
+    	    var latest = pair[1];
+	    $("#list").append("<p class=\"paragraph\" id=\"listp\">"+latest+"/"+latest+"</p>");
+          </script>
 
 	</div>
 
